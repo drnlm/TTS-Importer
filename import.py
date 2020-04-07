@@ -15,6 +15,15 @@ DIGITS = re.compile(r'\d+$')
 DECK_TEMPLATE = os.path.join(os.path.dirname(sys.argv[0]), 'Templates', 'Deck_Template.json')
 DECK_THUMBNAIL = os.path.join(os.path.dirname(sys.argv[0]), 'Templates', 'Deck_Template.pmg')
 
+
+# We handle cases where either the card name has not been updated in the json file, or
+# it has and we might have older names
+SPECIAL_CASES = {
+    'pentexsubversion': 'pentextmsubversion',
+    'pentexlovesyou': 'pentextmlovesyou',
+    'mylanhorseedgoblin': 'mylanhorseed',
+}
+
 def parse_file(sFileName: str) -> List[List[str]]:
     """Parse a ARBD'ish text file and return a list of crypt identifiers
        and a list library identifiers"""
@@ -54,7 +63,11 @@ def parse_file(sFileName: str) -> List[List[str]]:
                 sCand = NONNAME.sub('', sCand)
                 aName.append(sCand)
             # Already lowercase
+            if aName[0] == 'the':
+                aName = aName[1:] + [aName[0]]
             sName = ''.join(aName)
+            if sName in SPECIAL_CASES:
+                sName = SPECIAL_CASES[sName]
             if bInCrypt:
                 aCrypt.extend([sName]*iNum)
             else:
