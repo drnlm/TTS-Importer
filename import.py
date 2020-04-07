@@ -41,14 +41,14 @@ def parse_file(sFileName: str) -> List[List[str]]:
                 sDigit = sDigit[:-1]
             iNum = int(sDigit)
             aParts = sRest.split()
-            aName = []
-            for sCand in aParts:
-                sCand = NONNAME.sub('', sCand)
+            aName = [NONNAME.sub('', aParts[0])]  # Mainly to handle 44 magnum and 419 operation
+            for sCand in aParts[1:]:
                 # We add bits until we reach something that looks like a capacity number, or the end of the string
                 if len(sCand) < 3:
                     # Only consider one or two digit numbers
                     if DIGITS.match(sCand):
                         break
+                sCand = NONNAME.sub('', sCand)
                 aName.append(sCand)
             # Already lowercase
             sName = ''.join(aName)
@@ -59,17 +59,36 @@ def parse_file(sFileName: str) -> List[List[str]]:
     return [aCrypt, aLibrary]
 
 
-def create_json(aData: List[List[str]], dTTSJson: Dict[str, str]) -> None:
+def create_json(aData: List[List[str]], dTTSJson: Dict[str, Dict]) -> None:
     """Create the TTS Json file"""
-    print("Crypt")
-    print(aData[0])
-    print("Library")
-    print(aData[1])
+    # Create crypt
+    for sName in aData[0]:
+        if sName not in dTTSJson:
+            raise RuntimeError(f"Missing object for {sName}")
+
+    # Create library
+    for sName in aData[1]:
+        if sName not in dTTSJson:
+            raise RuntimeError(f"Missing object for {sName}")
 
 
-def load_tts_json(sFileName: str) -> Dict[str, str]:
+
+def load_tts_json(sFileName: str) -> Dict[str, Dict]:
     """Load the json file specifying the card objects"""
-    return {}
+    dRes: Dict[str, Dict] = {}
+    with open(sFileName, 'r') as oF:
+        dData = json.load(oF)
+        # We want to extract the 2 relevant chunks as a set
+        # of 'name: object' entries
+        # This is potentially unstable when the module is updated
+        # Crypt Deck
+        for oObj in dData['ObjectStates'][0]['ContainedObjects']:
+            dRes[oObj['Nickname']] = oObj
+        # And Library Deck
+        for oObj in dData['ObjectStates'][1]['ContainedObjects']:
+            dRes[oObj['Nickname']] = oObj
+    return dRes
+
 
 
 def find_json_file() -> str:
