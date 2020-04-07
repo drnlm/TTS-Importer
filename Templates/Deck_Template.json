@@ -1,0 +1,757 @@
+{
+  "SaveName": "",
+  "GameMode": "",
+  "Gravity": 0.5,
+  "PlayArea": 0.5,
+  "Date": "",
+  "Table": "",
+  "Sky": "",
+  "Note": "",
+  "Rules": "",
+  "XmlUI": "",
+  "LuaScript": "",
+  "LuaScriptState": "",
+  "ObjectStates": [
+    {
+      "Name": "Deck",
+      "Transform": {
+        "posX": -8.708832,
+        "posY": 1.1591903,
+        "posZ": -8.239059,
+        "rotX": 5.22204255E-06,
+        "rotY": 179.999985,
+        "rotZ": 180.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": false,
+      "SidewaysCard": false,
+      "DeckIDs": [
+        6104,
+        6104
+      ],
+      "CustomDeck": {
+        "61": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343473899/92A609D8877EF64F7467D922A83C603269C49C42/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625398090937846/8A210C178526839FE6EDE3B84CEE53950CE29AB1/",
+          "NumWidth": 10,
+          "NumHeight": 7,
+          "BackIsHidden": false,
+          "UniqueBack": false
+        }
+      },
+      "XmlUI": "",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "ContainedObjects": [
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": 0.03614205,
+            "posY": 1.3037678,
+            "posZ": -0.14448297,
+            "rotX": 0.00705644675,
+            "rotY": 180.0,
+            "rotZ": 179.997849,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "unmada",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6104,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "61": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343473899/92A609D8877EF64F7467D922A83C603269C49C42/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625398090937846/8A210C178526839FE6EDE3B84CEE53950CE29AB1/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "6a44e5"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.867187E-06,
+            "posY": 1.14875793,
+            "posZ": 6.631119E-07,
+            "rotX": -0.000402491452,
+            "rotY": 179.999985,
+            "rotZ": 179.997375,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "unmada",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6104,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "61": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343473899/92A609D8877EF64F7467D922A83C603269C49C42/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625398090937846/8A210C178526839FE6EDE3B84CEE53950CE29AB1/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "99f6d9"
+        }
+      ],
+      "GUID": "28d019"
+    },
+    {
+      "Name": "Deck",
+      "Transform": {
+        "posX": 2.75010633,
+        "posY": -0.003134966,
+        "posZ": 0.0665216446,
+        "rotX": 6.383264E-06,
+        "rotY": 180.0007,
+        "rotZ": 180.0,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": false,
+      "SidewaysCard": false,
+      "DeckIDs": [
+        6001,
+        6001,
+        6001,
+        6001,
+        6001,
+        6001,
+        6001,
+        6001,
+        6001,
+        6001,
+        6001
+      ],
+      "CustomDeck": {
+        "60": {
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+          "NumWidth": 10,
+          "NumHeight": 7,
+          "BackIsHidden": false,
+          "UniqueBack": false
+        }
+      },
+      "XmlUI": "",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "ContainedObjects": [
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.97454071,
+            "posY": 1.30109692,
+            "posZ": 6.69189024,
+            "rotX": 4.56903763E-05,
+            "rotY": 180.000839,
+            "rotZ": 179.999786,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "cf9b04"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.97454071,
+            "posY": 1.30109692,
+            "posZ": 6.69189024,
+            "rotX": 9.292821E-05,
+            "rotY": 180.000839,
+            "rotZ": 179.9996,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "cf9b04"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.97454071,
+            "posY": 1.30109692,
+            "posZ": 6.69189024,
+            "rotX": 0.000383974431,
+            "rotY": 180.000839,
+            "rotZ": 179.998215,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "cf9b04"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.97454071,
+            "posY": 1.30109692,
+            "posZ": 6.69189024,
+            "rotX": 0.0003581144,
+            "rotY": 180.000839,
+            "rotZ": 179.998367,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "cf9b04"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.97454071,
+            "posY": 1.30109692,
+            "posZ": 6.69189024,
+            "rotX": 0.000331143441,
+            "rotY": 180.000839,
+            "rotZ": 179.998489,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "cf9b04"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.97454071,
+            "posY": 1.30109692,
+            "posZ": 6.69189024,
+            "rotX": 0.000320191873,
+            "rotY": 180.000839,
+            "rotZ": 179.99855,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "cf9b04"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.97454071,
+            "posY": 1.30109692,
+            "posZ": 6.69189024,
+            "rotX": 0.000346471,
+            "rotY": 180.000839,
+            "rotZ": 179.998428,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "cf9b04"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.97454071,
+            "posY": 1.30109692,
+            "posZ": 6.69189024,
+            "rotX": 0.000458685157,
+            "rotY": 180.000839,
+            "rotZ": 179.997864,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "cf9b04"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.97454071,
+            "posY": 1.30109692,
+            "posZ": 6.69189024,
+            "rotX": 0.001804881,
+            "rotY": 180.000839,
+            "rotZ": 179.99147,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "b87df4"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -4.496163,
+            "posY": 1.14879644,
+            "posZ": 6.67101955,
+            "rotX": -3.142218E-05,
+            "rotY": 180.000839,
+            "rotZ": 179.999908,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "cf9b04"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -5.854074,
+            "posY": 1.14874387,
+            "posZ": -8.130656,
+            "rotX": -0.000581094355,
+            "rotY": 180.000824,
+            "rotZ": 179.996445,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "lovingagony",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 6001,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "60": {
+              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/788627179343464681/AE7B37BC6CA129C6B605B185F88739B1D8DD9907/",
+              "BackURL": "http://cloud-3.steamusercontent.com/ugc/788625540704528122/8D8B45E10227815EE9C2A66B25DA7CD4EEBB6FBA/",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": false,
+              "UniqueBack": false
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "cf9b04"
+        }
+      ],
+      "GUID": "233766"
+    }
+  ],
+  "TabStates": {},
+  "VersionNumber": ""
+}
