@@ -12,6 +12,9 @@ from typing import Dict, List
 NONNAME = re.compile(r'\W')
 DIGITS = re.compile(r'\d+$')
 
+DECK_TEMPLATE = os.path.join(os.path.dirname(sys.argv[0]), 'Templates', 'Deck_Template.json')
+DECK_THUMBNAIL = os.path.join(os.path.dirname(sys.argv[0]), 'Templates', 'Deck_Template.pmg')
+
 def parse_file(sFileName: str) -> List[List[str]]:
     """Parse a ARBD'ish text file and return a list of crypt identifiers
        and a list library identifiers"""
@@ -61,16 +64,48 @@ def parse_file(sFileName: str) -> List[List[str]]:
 
 def create_json(aData: List[List[str]], dTTSJson: Dict[str, Dict]) -> None:
     """Create the TTS Json file"""
+    # Load Template
+    with open(DECK_TEMPLATE, 'r') as oF:
+        dDeckBase = json.load(oF)
+    dCryptTransform = dDeckBase['ObjectStates'][0]['ContainedObjects'][0]['Transform'].copy()
+    dLibraryTransform = dDeckBase['ObjectStates'][1]['ContainedObjects'][0]['Transform'].copy()
+
+    dThisDeck = dDeckBase.copy()
+    dCrypt = dThisDeck['ObjectStates'][0]
+    dLibrary = dThisDeck['ObjectStates'][1]
+    dCrypt['ContainedObjects'] = []
+    dCrypt['DeckIDs'] = []
+    dCrypt['CustomDeck'] = {}
+
+
+    dLibrary['ContainedObjects'] = []
+    dLibrary['DeckIDs'] = []
+    dLibrary['CustomDeck'] = {}
     # Create crypt
     for sName in aData[0]:
         if sName not in dTTSJson:
             raise RuntimeError(f"Missing object for {sName}")
+        oObj = dTTSJson[sName]
+        oCard = oObj.copy()
+        # This doesn't seem to matter much, but it gets set, so we do likewise
+        oCard['Transform'] = dCryptTransform
+        dCrypt['DeckIDs'].append(oCard['CardID'])
+        dCrypt['CustomDeck'].update(oCard['CustomDeck'])
+        dCrypt['ContainedObjects'].append(oCard)
 
     # Create library
     for sName in aData[1]:
         if sName not in dTTSJson:
             raise RuntimeError(f"Missing object for {sName}")
+        oObj = dTTSJson[sName]
+        oCard = oObj.copy()
+        oCard['Transform'] = dLibraryTransform
+        dLibrary['DeckIDs'].append(oCard['CardID'])
+        dLibrary['CustomDeck'].update(oCard['CustomDeck'])
+        dLibrary['ContainedObjects'].append(oCard)
 
+    with open('Deck.json', 'w') as oF:
+        json.dump(dThisDeck, oF)
 
 
 def load_tts_json(sFileName: str) -> Dict[str, Dict]:
