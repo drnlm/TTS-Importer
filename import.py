@@ -158,7 +158,7 @@ def gen_prefixes(dTTSJson: Dict[str, Dict]) -> None:
         if len(sName) < 13:
             # Too short to worry about
             continue
-        for iLength in (12, 13, 14, 15, 16):
+        for iLength in (12, 13, 14, 15, 16, 17, 18):
             sPrefix = sName[:iLength]
             if sPrefix not in dTTSJson:
                 dTTSJson[sPrefix] = dTTSJson[sName]
