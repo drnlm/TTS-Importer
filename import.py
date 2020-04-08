@@ -4,8 +4,8 @@ import os
 import sys
 import re
 import string
-
 import json
+import unicodedata
 
 from typing import Dict, List
 
@@ -23,6 +23,14 @@ SPECIAL_CASES = {
     'pentexlovesyou': 'pentextmlovesyou',
     'mylanhorseedgoblin': 'mylanhorseed',
 }
+
+def unaccent(sData: str) -> str:
+    """Remove unicode accents.
+
+       Convert to normed decomposed for and then strip non-ascii characters"""
+    sNormed = unicodedata.normalize('NFD', sData)
+    return "".join(b for b in sNormed if ord(b) < 128)
+
 
 def parse_file(sFileName: str) -> List[List[str]]:
     """Parse a ARBD'ish text file and return a list of crypt identifiers
@@ -53,6 +61,8 @@ def parse_file(sFileName: str) -> List[List[str]]:
                 sDigit = sDigit[:-1]
             iNum = int(sDigit)
             aParts = sRest.split()
+            # Normalise unicode characters
+            aParts = [unaccent(x) for x in aParts]
             aName = [NONNAME.sub('', aParts[0])]  # Mainly to handle 44 magnum and 419 operation
             for sCand in aParts[1:]:
                 # We add bits until we reach something that looks like a capacity number, or the end of the string
