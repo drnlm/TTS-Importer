@@ -138,6 +138,21 @@ def load_tts_json(sFileName: str) -> Dict[str, Dict]:
     return dRes
 
 
+def gen_prefixes(dTTSJson: Dict[str, Dict]) -> None:
+    """ARDB's text format truncates vampire names to 18 characters, so
+       we generate prefixes for the names referencing the same objects.
+       Since we're doing it from the nicknames, and don't know how many
+       spaces where replaced, this is rather hack'ish and inefficient"""
+    # We're mutating the dictionary, so we need to iterate over the keys
+    for sName in list(dTTSJson.keys()):
+        if len(sName) < 13:
+            # Too short to worry about
+            continue
+        for iLength in (12, 13, 14, 15, 16):
+            sPrefix = sName[:iLength]
+            if sPrefix not in dTTSJson:
+                dTTSJson[sPrefix] = dTTSJson[sName]
+
 
 def find_json_file() -> str:
     """Try to find the VtES TTS module file"""
@@ -157,6 +172,7 @@ if __name__ == "__main__":
         sJsonFile = find_json_file()
     print(f"Using {sJsonFile} for TTS data")
     dTTSData = load_tts_json(sJsonFile)
+    gen_prefixes(dTTSData)
     aDeckData = parse_file(sys.argv[1])
     create_json(aDeckData, dTTSData)
 
