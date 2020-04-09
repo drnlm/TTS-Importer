@@ -128,7 +128,7 @@ def create_json(aData: List[List[str]], dTTSJson: Dict[str, Dict]) -> None:
         dLibrary['ContainedObjects'].append(oCard)
 
     with open('Deck.json', 'w') as oF:
-        json.dump(dThisDeck, oF)
+        json.dump(dThisDeck, oF, indent=2)
 
 
 def load_tts_json(sFileName: str) -> Dict[str, Dict]:
