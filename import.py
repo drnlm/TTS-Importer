@@ -41,14 +41,14 @@ def parse_file(sFileName: str) -> List[List[str]]:
     bInLibrary = False
     with open(sFileName, 'r') as oFile:
         for sLine in oFile.readlines():
-            sLine = sLine.strip().lower()
+            sLine = sLine.strip()
             if not sLine:
                 continue
-            if sLine.startswith('crypt') and not bInCrypt:
+            if sLine.lower().startswith('crypt') and not bInCrypt:
                 bInCrypt = True
                 bInLibrary = False
                 continue
-            if sLine.startswith('library') and not bInLibrary:
+            if sLine.lower().startswith('library') and not bInLibrary:
                 bInCrypt = False
                 bInLibrary = True
                 continue
@@ -61,24 +61,36 @@ def parse_file(sFileName: str) -> List[List[str]]:
                 sDigit = sDigit[:-1]
             iNum = int(sDigit)
             aParts = sRest.split()
+            sGroup = ''
+            if bInCrypt:
+                if ':' in aParts[-1]:
+                    sGroup = aParts[-1].split(':', 1)[1]
+                    if 'ADV' in sLine:
+                        sGroup = f'G{sGroup} ADV)'
+                    else:
+                        sGroup = f'(G{sGroup})'
             # Normalise unicode characters
-            aParts = [unaccent(x) for x in aParts]
-            aName = [NONNAME.sub('', aParts[0])]  # Mainly to handle 44 magnum and 419 operation
+            #aParts = [unaccent(x) for x in aParts]
+            aName = [aParts[0]]  # Mainly to handle 44 magnum and 419 operation
             for sCand in aParts[1:]:
                 # We add bits until we reach something that looks like a capacity number, or the end of the string
                 if len(sCand) < 3:
                     # Only consider one or two digit numbers
                     if DIGITS.match(sCand):
                         break
-                sCand = NONNAME.sub('', sCand)
+                #sCand = NONNAME.sub('', sCand)
                 aName.append(sCand)
             # Already lowercase
-            if aName[0] == 'the':
-                aName = aName[1:] + [aName[0]]
-            sName = ''.join(aName)
-            if sName in SPECIAL_CASES:
-                sName = SPECIAL_CASES[sName]
+            #if aName[0] == 'the':
+            #    aName = aName[1:] + [aName[0]]
+            sName = ' '.join(aName)
+            #if sName in SPECIAL_CASES:
+            #    sName = SPECIAL_CASES[sName]
+            if sName.endswith(', The'):
+                sName = 'The ' + sName.replace(', The', '')
             if bInCrypt:
+                if sGroup:
+                    sName = sName + ' ' + sGroup
                 aCrypt.extend([sName]*iNum)
             else:
                 aLibrary.extend([sName]*iNum)
@@ -140,11 +152,9 @@ def load_tts_json(sFileName: str) -> Dict[str, Dict]:
         # of 'name: object' entries
         # This is potentially unstable when the module is updated
         # Crypt Deck
-        for oObj in dData['ObjectStates'][0]['ContainedObjects']:
-            dRes[oObj['Nickname']] = oObj
-        # And Library Deck
-        for oObj in dData['ObjectStates'][1]['ContainedObjects']:
-            dRes[oObj['Nickname']] = oObj
+        for oBag in dData['ObjectStates']:
+            for oPossCard in oBag['ContainedObjects']:
+                dRes[oPossCard['Nickname']] = oPossCard
     return dRes
 
 
@@ -166,7 +176,7 @@ def gen_prefixes(dTTSJson: Dict[str, Dict]) -> None:
 
 def find_json_file() -> str:
     """Try to find the VtES TTS module file"""
-    DEFAULT = "1955001917.json"
+    DEFAULT = "VtES_TTS_Module.json"
     if sys.platform.startswith("win") and "APPDATA" in os.environ:
         sCand = os.path.join(os.environ["APPDATA"], "Tabletop Simulator", "Mods", "Workshop", DEFAULT)
     else:
